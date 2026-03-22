@@ -24,3 +24,10 @@ def two_sum(numbers, target):
             right -= 1
 
     return None # if no pair is found
+
+
+# SQL: Find the second highest salary in an employee table.
+
+SELECT MAX(salary) AS secondMaxSalary
+FROM employee
+WHERE salary < (SELECT MAX(salary) FROM employee);
